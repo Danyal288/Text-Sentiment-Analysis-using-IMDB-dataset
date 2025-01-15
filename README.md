@@ -6,39 +6,33 @@ This project focuses on building a sentiment analysis model using the IMDB Revie
 
 # Steps
 
-**1. Text Preprocessing**
+**1. Data Preprocessing**
+Import libraries such as nltk, re, and pandas.
+Cleaned the text,
+Removed HTML tags, URLs, and special characters.
+Tokenize the text into individual words.
+Removed stopwords (common words with no semantic importance).
+Applyed stemming to normalize words.
+Checked for duplicates and remove them.
 
-Preprocessing is a crucial step to clean and normalize the text data. The following operations are performed:
+**2. Exploratory Data Analysis (EDA)**
+Visualize the distribution of sentiments.
+Generated word clouds to highlight frequently occurring terms in positive and negative reviews.
 
-1- Tokenization: Splitting the text into individual words (tokens).
+**3. Feature Engineering**
+Used the TF-IDF Vectorizer to convert text data into numerical format.
+Split the dataset into training and testing subsets for model training.
 
-2-Stopword Removal: Removing commonly used words that do not contribute to the sentiment, such as "the," "is," etc.
+**4. Model Training and Evaluation**
+Trained a Support Vector Classifier (SVC) model for sentiment classification.
+Tuned hyperparameters for optimal results.
+Evaluated model performance with metrics like confusion matric.
 
-3-Lemmatization: Converting words to their base or dictionary form for normalization (e.g., "running" becomes "run").
+# Finding.
+*Key Insight*
+Frequent terms in positive reviews include great, amazing, and excellent.
+Negative reviews frequently feature bad, worst, and boring.
 
-**2. Feature Engineering**
-
-The preprocessed text data is converted into a numerical format for machine learning using:
-
-1-TF-IDF Vectorization: A statistical measure to evaluate the importance of a word in a document relative to the entire corpus.
-
-2-Word Embeddings (Optional): Advanced feature representation using pre-trained embeddings like Word2Vec, GloVe, or FastText (if applicable).
-
-**3. Model Training**
-
-A classifier is trained to predict sentiment:
-
-1-Algorithms Used:
-
-2-Logistic Regression
-
-3-Naive Bayes (Multinomial)
-
-Training Process:
-
-1-The dataset is split into training and testing subsets.
-
-2-The classifier is trained on the training set and tuned for optimal performance.
-
-**4. Model evaluation**
-we use the Confusion Matrix it Provides a detailed breakdown of true positives, false positives, true negatives, and false negatives.
+*Observation*
+Proper preprocessing significantly impacts model performance.
+SVC performs well with tuned hyperparameters but requires computational resources for larger datasets.
